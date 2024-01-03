@@ -7,6 +7,14 @@ return {
   { import = "lazyvim.plugins.extras.util.project" },
   -- { import = "lazyvim.plugins.extras.ui.mini-animate" },
   {
+    "folke/noice.nvim",
+    opts = {
+      presets = {
+        lsp_doc_border = true,
+      },
+    },
+  },
+  {
     "folke/tokyonight.nvim",
     opts = {
       transparent = true,

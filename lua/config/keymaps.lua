@@ -29,3 +29,7 @@ map("i", [[<M-C-J>]], [[<Esc>:m .+1<CR>==gi]], { noremap = true })
 map("i", [[<M-C-K>]], [[<Esc>:m .-2<CR>==gi]], { noremap = true })
 map("v", [[<M-C-J>]], [[:m '>+1<CR>gv=gv]], { noremap = true })
 map("v", [[<M-C-K>]], [[:m '<-2<CR>gv=gv]], { noremap = true })
+
+-- Octo.nvim mentions, issues and pr completion
+map("i", "@", "@<C-x><C-o>", { silent = true, buffer = true })
+map("i", "#", "#<C-x><C-o>", { silent = true, buffer = true })
