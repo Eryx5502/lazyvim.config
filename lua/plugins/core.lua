@@ -7,15 +7,15 @@ return {
   { import = "lazyvim.plugins.extras.formatting.prettier" },
   { import = "lazyvim.plugins.extras.util.project" },
   -- { import = "lazyvim.plugins.extras.ui.mini-animate" },
-  {
-    "echasnovski/mini.indentscope",
-    opts = {
-      draw = {
-        delay = 0,
-        animation = require("mini.indentscope").gen_animation.none(),
-      },
-    },
-  },
+  -- {
+  --   "echasnovski/mini.indentscope",
+  --   opts = {
+  --     draw = {
+  --       delay = 0,
+  --       animation = require("mini.indentscope").gen_animation.none(),
+  --     },
+  --   },
+  -- },
   {
     "folke/noice.nvim",
     opts = {

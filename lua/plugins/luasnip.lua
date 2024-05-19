@@ -1,4 +1,6 @@
 return {
+  { import = "lazyvim.plugins.extras.coding.luasnip" },
+  { "garymjr/nvim-snippets", enabled = false },
   {
     "L3MON4D3/LuaSnip",
     lazy = false,
