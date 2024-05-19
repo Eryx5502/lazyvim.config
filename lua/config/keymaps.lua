@@ -23,12 +23,12 @@ map("n", "<leader>k", [[mnO<esc>`n]], { silent = true, desc = "Blank line above"
 map("n", "zn", "a<cr><esc>k$", { silent = true, desc = "Split line" })
 
 -- Moving lines
-map("n", [[<M-C-J>]], [[:m .+1<CR>==]], { noremap = true })
-map("n", [[<M-C-K>]], [[:m .-2<CR>==]], { noremap = true })
-map("i", [[<M-C-J>]], [[<Esc>:m .+1<CR>==gi]], { noremap = true })
-map("i", [[<M-C-K>]], [[<Esc>:m .-2<CR>==gi]], { noremap = true })
-map("v", [[<M-C-J>]], [[:m '>+1<CR>gv=gv]], { noremap = true })
-map("v", [[<M-C-K>]], [[:m '<-2<CR>gv=gv]], { noremap = true })
+map("n", [[<M-C-J>]], [[:m .+1<CR>==]], { noremap = true, silent = true })
+map("n", [[<M-C-K>]], [[:m .-2<CR>==]], { noremap = true, silent = true })
+map("i", [[<M-C-J>]], [[<Esc>:m .+1<CR>==gi]], { noremap = true, silent = true })
+map("i", [[<M-C-K>]], [[<Esc>:m .-2<CR>==gi]], { noremap = true, silent = true })
+map("v", [[<M-C-J>]], [[:m '>+1<CR>gv=gv]], { noremap = true, silent = true })
+map("v", [[<M-C-K>]], [[:m '<-2<CR>gv=gv]], { noremap = true, silent = true })
 
 -- Octo.nvim mentions, issues and pr completion
 map("i", "@", "@<C-x><C-o>", { silent = true, buffer = true })
