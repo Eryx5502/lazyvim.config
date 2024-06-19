@@ -178,7 +178,19 @@ return {
   -- see diffview on a nice interface
   {
     "sindrets/diffview.nvim",
-    event = "BufRead",
+    opts = {
+      view = {
+        merge_tool = {
+          layout = "diff3_mixed",
+        },
+      },
+    },
+    -- event = "BufRead",
+    cmd = { "DiffviewOpen", "DiffviewFileHistory" },
+    keys = {
+      { "<leader>do", "<cmd>DiffviewOpen<cr>", desc = "Diffview Open" },
+      { "<leader>dh", "<cmd>DiffviewFileHistory<cr>", desc = "Diffview File History" },
+    },
   },
   { "tpope/vim-rhubarb" }, -- For enabling GBrowse for github
   { "shumphrey/fugitive-gitlab.vim" }, -- For enabling GBrowse for gitlab
