@@ -8,9 +8,7 @@ return {
       vim.g.vimtex_mappings_disable = { ["n"] = { "K" } } -- disable `K` as it conflicts with LSP hover
       vim.g.vimtex_quickfix_method = vim.fn.executable("pplatex") == 1 and "pplatex" or "latexlog"
       vim.g.tex_flavor = "latex"
-      if
-        vim.fn.has("win32") or (vim.fn.has("unix") and vim.fn.exists("$WSLENV")) and vim.fn.executable("sioyek.exe")
-      then
+      if (vim.fn.has("win32") == 1 or vim.fn.has("wsl") == 1) and vim.fn.executable("sioyek.exe") then
         vim.g.vimtex_view_method = "sioyek"
         vim.g.vimtex_view_sioyek_exe = "sioyek.exe"
         vim.g.vimtex_callback_progpath = "wsl -e bash -lic nvim"

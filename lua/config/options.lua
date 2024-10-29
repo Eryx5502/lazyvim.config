@@ -3,7 +3,8 @@
 -- Add any additional options here
 vim.g.maplocalleader = "ñ"
 
-if vim.fn.has("wsl") then
+if vim.fn.has("wsl") == 1 then
+  vim.print(vim.fn.has("wsl"))
   vim.g.clipboard = {
     name = "WslClipboard",
     copy = {
