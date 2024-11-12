@@ -3,8 +3,10 @@
 -- Add any additional options here
 vim.g.maplocalleader = "ñ"
 
+-- Load .nvim.lua for local project config. See :h exrc for more info
+vim.o.exrc = true
+
 if vim.fn.has("wsl") == 1 then
-  vim.print(vim.fn.has("wsl"))
   vim.g.clipboard = {
     name = "WslClipboard",
     copy = {

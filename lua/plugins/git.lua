@@ -201,4 +201,48 @@ return {
       current_line_blame = true,
     },
   },
+  {
+    "polarmutex/git-worktree.nvim",
+    version = "^2",
+    module = "git-worktree",
+    dependencies = {
+      "nvim-telescope/telescope.nvim",
+      "nvim-lua/plenary.nvim",
+    },
+    keys = {
+      {
+        "<leader>gwc",
+        function()
+          require("telescope").extensions.git_worktree.create_git_worktree()
+        end,
+        desc = "[G]it [W]orktree [C]reate",
+      },
+      {
+        "<leader>gws",
+        function()
+          require("telescope").extensions.git_worktree.git_worktree()
+        end,
+        desc = "[G]it [W]orktree [S]witch",
+      },
+    },
+    config = function()
+      local wk_ok, wk = pcall(require, "which-key")
+      if wk_ok then
+        wk.add({
+          mode = { "n", "v" },
+          ["<leader>gw"] = { name = "+worktrees" },
+        })
+      end
+      local status_ok, gwt = pcall(require, "git-worktree")
+      if not status_ok then
+        return
+      end
+
+      local config = {}
+
+      local hooks = require("git-worktree.hooks")
+      hooks.register(hooks.type.SWITCH, hooks.builtins.update_current_buffer_on_switch)
+      require("telescope").load_extension("git_worktree")
+    end,
+  },
 }
