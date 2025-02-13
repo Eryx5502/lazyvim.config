@@ -3,6 +3,9 @@
 -- Add any additional options here
 vim.g.maplocalleader = "ñ"
 
+-- Disable animations
+vim.g.snacks_animate = false
+
 -- Load .nvim.lua for local project config. See :h exrc for more info
 vim.o.exrc = true
 

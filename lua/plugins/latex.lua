@@ -1,7 +1,6 @@
 local util = require("lspconfig.util")
 
 return {
-  { import = "lazyvim.plugins.extras.lang.tex" },
   {
     "lervag/vimtex",
     config = function()

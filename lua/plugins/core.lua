@@ -1,21 +1,4 @@
 return {
-  -- Disabled
-  -- { "echasnovski/mini.indentscope", enabled = false },
-  -- Extras
-  { import = "lazyvim.plugins.extras.lang.typescript" },
-  { import = "lazyvim.plugins.extras.lang.json" },
-  { import = "lazyvim.plugins.extras.formatting.prettier" },
-  { import = "lazyvim.plugins.extras.util.project" },
-  -- { import = "lazyvim.plugins.extras.ui.mini-animate" },
-  -- {
-  --   "echasnovski/mini.indentscope",
-  --   opts = {
-  --     draw = {
-  --       delay = 0,
-  --       animation = require("mini.indentscope").gen_animation.none(),
-  --     },
-  --   },
-  -- },
   {
     "folke/noice.nvim",
     opts = {
