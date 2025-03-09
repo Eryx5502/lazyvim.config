@@ -181,7 +181,7 @@ return {
     opts = {
       view = {
         merge_tool = {
-          layout = "diff3_mixed",
+          layout = "diff4_mixed",
         },
       },
     },
