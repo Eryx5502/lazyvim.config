@@ -23,3 +23,7 @@ if vim.fn.has("wsl") == 1 then
     cache_enabled = true,
   }
 end
+
+if vim.fn.has("win32") == 1 then
+  LazyVim.terminal.setup("pwsh")
+end
